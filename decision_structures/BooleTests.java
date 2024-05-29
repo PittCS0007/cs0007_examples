@@ -10,7 +10,7 @@ public class BooleTests {
       System.out.println("You entered a number less than 10!");
     }
     else if (userNumber > 10) {
-      if (userNumber > 5) {
+      if (userNumber > 50) {
         System.out.println("You entered a number MUCH greater than 10");
       }
       else {
