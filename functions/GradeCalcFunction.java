@@ -1,18 +1,17 @@
 import java.util.Scanner;
 
-public class GradeCalc {
-  public static int getGrade(String assignmentName, int total) {
+public class GradeCalcFunction {
+  public static int getGrade(String assignmentName, int total, Scanner input) {
     System.out.print("What is your " + assignmentName + " grade (out of " + total + ")? ");
-    int grade = input.nextInt();
-    return grade;
+    return input.nextInt();
   }
   
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
     // Get Exams
-    int exam1 = getGrade("Exam1", 100);
-    int exam2 = getGrade("Exam2", 100);
+    int exam1 = getGrade("Exam1", 100, input);
+    int exam2 = getGrade("Exam2", 100, input);
 
     // Get Projects
     System.out.print("What is your Project1 grade (out of 100)? ");
@@ -42,10 +41,11 @@ public class GradeCalc {
     int quizAvg = input.nextInt();
 
     // Compute total
-    double exam_total = (exam1 / 100.0) + (exam2 / 100.0);
+    /*double exam_total = (exam1 / 100.0) + (exam2 / 100.0);
     exam_total = exam_total / 2.0;
     exam_total = exam_total * 40.0;
-    //double total = ((exam1 + exam2)/200.0) * 40.0 + ((project1 + project2 + project3)/300.0) * 40.0 + lecPart1 + lecPart2 + recPart1 + recPart2 + (quizAvg/100.0) * 4;
+    */
+    double total = ((exam1 + exam2)/200.0) * 40.0 + ((project1 + project2 + project3)/300.0) * 40.0 + lecPart1 + lecPart2 + recPart1 + recPart2 + (quizAvg/100.0) * 4;
 
     // Find letter grade
     String grade = "";
