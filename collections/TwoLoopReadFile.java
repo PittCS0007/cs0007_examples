@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class ReadFile {
+public class TwoLoopReadFile {
   public static void main(String[] args) throws FileNotFoundException {
     // Assume that we get the filename from the command line
     File fileToRead = new File(args[0]);

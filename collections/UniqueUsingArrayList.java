@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
 
-public class ArrayListReadFile {
+public class UniqueUsingArrayList {
   public static void main(String[] args) throws FileNotFoundException {
     // Assume that we get the filename from the command line
     File fileToRead = new File(args[0]);
@@ -18,20 +18,15 @@ public class ArrayListReadFile {
 
     inputFile.close();
 
-    System.out.println("Here is the item at index 3: " + fileLines.get(3));
-    System.out.println("There are " + fileLines.size() + " line in the ArrayList");
-
-    if (fileLines.contains("this")) {
-      System.out.println("'this' was in the file!");
-    }
-    else {
-      System.out.print("'this' was not in the file!");
-    }
+    ArrayList<String> uniqueLines = new ArrayList<String>();
 
     // Output each line to the terminal
     System.out.println("Here are the lines of the file:");
     for (String line : fileLines) {
-      System.out.println(line);
+      if (!uniqueLines.contains(line)) {
+        uniqueLines.add(line);
+        System.out.println(line);
+      }
     }
   }
 }
