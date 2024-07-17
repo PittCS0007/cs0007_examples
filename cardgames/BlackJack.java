@@ -51,6 +51,9 @@ public class BlackJack {
     if (playerHand.computeValue() > 21) {
       System.out.println("The dealer wins!");
     }
+    else if (dealerHand.computeValue() > 21) {
+      System.out.println("The player wins!");
+    }
     else if (dealerHand.computeValue() > playerHand.computeValue()) {
       System.out.println("The dealer wins!");
     }
